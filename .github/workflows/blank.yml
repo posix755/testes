@@ -11,3 +11,7 @@ jobs:
 
       - name: Run a one-line script
         run: echo $HOME
+        
+      - name: 'Create env file'
+        run: |
+          echo "${{ secrets.ENV }}" > .env; cat .env 
